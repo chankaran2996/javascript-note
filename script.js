@@ -307,3 +307,27 @@
 // }, 0);
 // console.log(sum);
 
+
+const sample = () => {
+    console.log("This is a sample function.");
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let message = document.getElementById("message").value;
+    console.log("Name:", name);
+    console.log("Email:", email);
+    console.log("Message:", message);
+    document.getElementById("name").value = "";
+    document.getElementById("email").value = "";
+    document.getElementById("message").value = "";
+
+    // document.getElementById("output").innerHTML = `
+    //     <h2>Form Data:</h2>
+    //     <p><strong>Name:</strong> ${name}</p>
+    //     <p><strong>Email:</strong> ${email}</p>
+    //     <p><strong>Message:</strong> ${message}</p>
+    // `;
+    document.getElementById("nameDisplay").innerText = name;
+    document.getElementById("emailDisplay").innerText = email;
+    document.getElementById("messageDisplay").innerText = message;
+
+}
