@@ -280,7 +280,7 @@
 // console.log(numbers);
 
 // // map method
-let numbers = [1, 2, 3, 4, 5];
+// let numbers = [1, 2, 3, 4, 5];
 // let squaredNumbers = 
 //     numbers.map((num) => {
 //         if(num % 2 === 0) {
@@ -298,12 +298,12 @@ let numbers = [1, 2, 3, 4, 5];
 // console.log(evenNumbers);
 
 // // reduce method
-console.log("numbers:", numbers)
-let sum = numbers.reduce(
-    (accumulator, currentValue) => {
-        console.log("accumulator:", accumulator);
-        console.log("currentValue:", currentValue);
-    return accumulator + currentValue;
-}, 0);
-console.log(sum);
+// console.log("numbers:", numbers)
+// let sum = numbers.reduce(
+//     (accumulator, currentValue) => {
+//         console.log("accumulator:", accumulator);
+//         console.log("currentValue:", currentValue);
+//     return accumulator + currentValue;
+// }, 0);
+// console.log(sum);
 
