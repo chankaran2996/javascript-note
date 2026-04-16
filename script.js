@@ -140,7 +140,86 @@
 // console.log("Sum:", sum(5, 10)); // Output: Sum: 15
 
 // iife function (Immediately Invoked Function Expression)
-(function() {
-    console.log("This is an IIFE.");
-})();
+// (function() {
+//     console.log("This is an IIFE.");
+// })();
 
+// different between synchronous and asynchronous functions
+// synchronous function
+// const syncFunction = () => {
+//     console.log("This is a synchronous function.");
+//     console.log("It executes in order.");
+// }
+// syncFunction();
+
+// asynchronous function using setTimeout
+// const asyncFunction = () => {
+//     console.log("This is an asynchronous function.");
+//     setTimeout(() => {
+//         console.log("This executes after 2 seconds.");
+//     }, 2000);
+//     console.log("This executes immediately.");
+// }
+// asyncFunction();
+
+// closure example
+// const outerFunction = (outerVariable) => {
+//     const innerFunction = (innerVariable) => {
+//         console.log("Outer Variable:", outerVariable);
+//         console.log("Inner Variable:", innerVariable);
+//     }
+//     console.log(outerVariable);
+//     // console.log(innerVariable); // This will cause an error because innerVariable is not defined in this scope
+//     return innerFunction;
+// }
+// const newFunction = outerFunction("Hello");
+// newFunction("World");
+// const sample = (a,b) => {
+//     const add = () => a + b;
+//     return add();
+// }
+// console.log(sample(5, 10)); // Output: 15
+
+// callback function example
+// const sampleCallback = (name) => {
+//     console.log("This is a sample callback function.");
+//     name();
+// }
+// const myCallback = () => {
+//     console.log("This is the callback function being called.");
+// }
+
+// sampleCallback(myCallback);
+
+// const sample = () => {
+//     setTimeout(() => {
+//         console.log("This is a sample function.");
+//     }, 3000);
+// }
+
+// sample();
+
+// callback Hell example
+
+const sample = () => {
+    setTimeout(() => {
+        console.log(5);
+        setTimeout(() => {
+            console.log(4);
+            setTimeout(() => {
+                console.log(3);
+                setTimeout(() => {
+                    console.log(2);
+                    setTimeout(() => {
+                        console.log(1);
+                        setTimeout(() => {
+                            console.log("Happy New Year!");
+                        }, 1000);
+                    }, 1000);
+                }, 1000);
+            }, 1000);
+        }, 1000);
+    }, 1000);
+}
+
+sample();
