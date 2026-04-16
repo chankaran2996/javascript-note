@@ -201,25 +201,49 @@
 
 // callback Hell example
 
-const sample = () => {
-    setTimeout(() => {
-        console.log(5);
-        setTimeout(() => {
-            console.log(4);
-            setTimeout(() => {
-                console.log(3);
-                setTimeout(() => {
-                    console.log(2);
-                    setTimeout(() => {
-                        console.log(1);
-                        setTimeout(() => {
-                            console.log("Happy New Year!");
-                        }, 1000);
-                    }, 1000);
-                }, 1000);
-            }, 1000);
-        }, 1000);
-    }, 1000);
-}
+// const sample = () => {
+//     setTimeout(() => {
+//         console.log(5);
+//         setTimeout(() => {
+//             console.log(4);
+//             setTimeout(() => {
+//                 console.log(3);
+//                 setTimeout(() => {
+//                     console.log(2);
+//                     setTimeout(() => {
+//                         console.log(1);
+//                         setTimeout(() => {
+//                             console.log("Happy New Year!");
+//                         }, 1000);
+//                     }, 1000);
+//                 }, 1000);
+//             }, 1000);
+//         }, 1000);
+//     }, 1000);
+// }
 
-sample();
+// sample();
+
+// promise example
+const samplePromise = new Promise((resolve, reject) => {
+    let success = true;
+    if (success) {
+        resolve("Promise resolved successfully!");
+    } else {        
+        reject("Promise rejected.");
+    }
+});
+
+samplePromise
+    .then((message) => {
+        console.log(message);
+        return "This is another then block.";
+    }).then((message) => {
+        console.log(message);        
+        return "This is yet another then block.";
+    }).then((message) => {
+        console.log(message);
+    }).catch((error) => {
+        console.log(error);
+    });
+
