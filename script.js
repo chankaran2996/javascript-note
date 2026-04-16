@@ -225,25 +225,85 @@
 // sample();
 
 // promise example
-const samplePromise = new Promise((resolve, reject) => {
-    let success = true;
-    if (success) {
-        resolve("Promise resolved successfully!");
-    } else {        
-        reject("Promise rejected.");
-    }
-});
+// const samplePromise = new Promise((resolve, reject) => {
+//     let success = true;
+//     if (success) {
+//         resolve("Promise resolved successfully!");
+//     } else {        
+//         reject("Promise rejected.");
+//     }
+// });
 
-samplePromise
-    .then((message) => {
-        console.log(message);
-        return "This is another then block.";
-    }).then((message) => {
-        console.log(message);        
-        return "This is yet another then block.";
-    }).then((message) => {
-        console.log(message);
-    }).catch((error) => {
-        console.log(error);
-    });
+// samplePromise
+//     .then((message) => {
+//         console.log(message);
+//         return "This is another then block.";
+//     }).then((message) => {
+//         console.log(message);        
+//         return "This is yet another then block.";
+//     }).then((message) => {
+//         console.log(message);
+//     }).catch((error) => {
+//         console.log(error);
+//     });
+
+// array methods example
+// length property
+// let numbers = [1, 2, 3, 4, 5];
+// console.log(numbers.length);
+// console.log("printing first num", 
+//     numbers[0]);
+// console.log("printing last num", 
+//     numbers[numbers.length - 1]);
+
+// // push method
+// console.log("before push:", numbers);
+// numbers.push(6);
+// console.log("after push:", numbers);
+
+// // pop method
+// console.log("before pop:", numbers);
+// numbers.pop();
+// console.log("after pop:", numbers);
+// console.log(numbers);
+
+// // shift method
+// console.log("before shift:", numbers);
+// numbers.shift();
+// console.log("after shift:", numbers);
+// console.log(numbers);
+
+// // unshift method
+// console.log("before unshift:", numbers);
+// numbers.unshift(0);
+// console.log("after unshift:", numbers);
+// console.log(numbers);
+
+// // map method
+let numbers = [1, 2, 3, 4, 5];
+// let squaredNumbers = 
+//     numbers.map((num) => {
+//         if(num % 2 === 0) {
+//             return num * num;
+//         }else{
+//             return num;
+//         }
+//     });
+// console.log(squaredNumbers);
+
+// // // filter method
+// let evenNumbers = numbers.filter(num => {
+//     return num % 2 === 0;
+// } );
+// console.log(evenNumbers);
+
+// // reduce method
+console.log("numbers:", numbers)
+let sum = numbers.reduce(
+    (accumulator, currentValue) => {
+        console.log("accumulator:", accumulator);
+        console.log("currentValue:", currentValue);
+    return accumulator + currentValue;
+}, 0);
+console.log(sum);
 
